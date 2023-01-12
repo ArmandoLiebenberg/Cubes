@@ -1,13 +1,13 @@
 Application Log
-Start: Thu Jan 12 15:21:55 2023
+Start: Fri Jan 13 07:48:16 2023
 
 WARNING: AudioDevice is not enabled. Set G3DSpecification::audio = true before invoking initGLG3D() to enable audio.
-Initializing System::findDataFile took 0.001715s
+Initializing System::findDataFile took 0.001982s
 
 Entering GApp::GApp()
 cwd = C:\Users\arman\Projects\Cubes\data-files
 System::setAppDataDir("C:\Users\arman\Projects\Cubes\data-files")
-System::setAppDataDirs()Initializing System::findDataFile took 0.001408s
+System::setAppDataDirs()Initializing System::findDataFile took 0.001062s
 Setting video mode
 wglSwapIntervalEXT(0);
 Setting initial rendering state.
@@ -559,11 +559,6 @@ Found scenes:
 
 
 
-
-
-
-
-
 _____________________________________________________
 
     ###    Files Used    ###
@@ -584,7 +579,6 @@ swscale-5.dll
 fmod.dll
 C:/Users/arman/Projects/Cubes/data-files/icon.png
 C:/Users/arman/Projects/Cubes/data-files/log.txt
-C:/Users/arman/Projects/Cubes/data-files/scene/task1.Scene.Any
 C:/Users/arman/Projects/Cubes/data-files/scene/task2.Scene.Any
 C:/Users/arman/g3d/G3D10/data-files/font/arial.fnt
 C:/Users/arman/g3d/G3D10/data-files/font/console-small.fnt
@@ -606,11 +600,7 @@ C:/Users/arman/g3d/G3D10/data-files/shader/AmbientOcclusion/AmbientOcclusion_rec
 C:/Users/arman/g3d/G3D10/data-files/shader/BumpMap/BumpMap.glsl
 C:/Users/arman/g3d/G3D10/data-files/shader/Camera/Camera.glsl
 C:/Users/arman/g3d/G3D10/data-files/shader/DDGIVolume/DDGIVolume.glsl
-C:/Users/arman/g3d/G3D10/data-files/shader/DefaultRenderer/DefaultRenderer_OIT_writePixel.glsl
-C:/Users/arman/g3d/G3D10/data-files/shader/DefaultRenderer/DefaultRenderer_compositeWeightedBlendedOIT.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/DefaultRenderer/DefaultRenderer_deferredShade.pix
-C:/Users/arman/g3d/G3D10/data-files/shader/Draw/Draw_sphereSection.pix
-C:/Users/arman/g3d/G3D10/data-files/shader/Draw/Draw_sphereSection.vrt
 C:/Users/arman/g3d/G3D10/data-files/shader/Film/Film_FXAA_13_quality.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/Film/Film_bloomExpose.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/Film/Film_composite.pix
@@ -628,8 +618,6 @@ C:/Users/arman/g3d/G3D10/data-files/shader/LightingEnvironment/LightingEnvironme
 C:/Users/arman/g3d/G3D10/data-files/shader/LightingEnvironment/LightingEnvironment_environmentMapUniforms.glsl
 C:/Users/arman/g3d/G3D10/data-files/shader/SkyboxSurface/SkyboxSurface_gbuffer.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/SkyboxSurface/SkyboxSurface_gbuffer.vrt
-C:/Users/arman/g3d/G3D10/data-files/shader/SlowMesh/SlowMesh_render.pix
-C:/Users/arman/g3d/G3D10/data-files/shader/SlowMesh/SlowMesh_render.vrt
 C:/Users/arman/g3d/G3D10/data-files/shader/TemporalFilter/TemporalFilter_apply.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/Texture/Texture.glsl
 C:/Users/arman/g3d/G3D10/data-files/shader/Texture/Texture_copy.pix
