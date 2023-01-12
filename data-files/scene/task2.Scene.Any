@@ -1,0 +1,119 @@
+// -*- c++ -*-
+{
+
+	name = "Task 2";
+
+	
+	models = {
+		// White Walls
+		whiteCube = ArticulatedModel::Specification {
+			filename = "model/cube/cube.obj";
+			preprocess = {
+				setMaterial(all(), Color3(1,1,1));
+				transformGeometry(all(), Matrix4::scale(0.02, 1.02, 0.98));
+			};
+		};
+
+		// White Walls
+		whiteBackCube = ArticulatedModel::Specification{
+			filename = "model/cube/cube.obj";
+			preprocess = {
+				setMaterial(all(), Color3(1,1,1));
+				transformGeometry(all(), Matrix4::scale(0.02, 0.96, 1.02));
+			};
+		};
+		
+		// Red Wall
+		redCube = ArticulatedModel::Specification {
+			filename = "model/cube/cube.obj";
+			preprocess = {
+				setMaterial(all(), Color3(1,0,0));
+				transformGeometry(all(), Matrix4::scale(0.02, 0.96, 0.96));
+			};
+		};
+
+		// Green Wall
+		greenCube = ArticulatedModel::Specification {
+			filename = "model/cube/cube.obj";
+			preprocess = {
+				setMaterial(all(), Color3(0,1,0));
+				transformGeometry(all(), Matrix4::scale(0.02, 0.96, 0.96));
+			};
+		};
+
+		// Tall Cube
+		tallCube = ArticulatedModel::Specification {
+			filename = "model/cube/cube.obj";
+			preprocess = {
+				setMaterial(all(), Color3(1,1,1));
+				transformGeometry(all(), Matrix4::scale(0.3, 0.6, 0.3));
+			};
+		};
+
+		// Short Cube
+		shortCube = ArticulatedModel::Specification {
+			filename = "model/cube/cube.obj";
+			preprocess = {
+				setMaterial(all(), Color3(1,1,1));
+				transformGeometry(all(), Matrix4::scale(0.3, 0.3, 0.3));
+			};
+		};
+
+	};
+
+	entities = {
+		skybox = Skybox {
+			texture = "cubemap/whiteroom/whiteroom-*.png";
+		};
+
+		sun = Light {
+			attenuation = (0,0,1);
+			bulbPower = Power3(4e+006);
+			frame = CFrame::fromXYZYPRDegrees(0, 0.49, -0.01, 0, 0, 90);
+			shadowMapSize = Vector2int16(2048, 2048);
+			spotHalfAngleDegrees = 5;
+			rectangular = true;
+			type = "SPOT";
+		};
+
+		cube0 = VisibleEntity {
+			model = "redCube";
+			frame = CFrame::fromXYZYPRDegrees(-0.5,0,0,0,0,0);
+		};
+
+		cube1 = VisibleEntity{
+			model = "greenCube";
+			frame = CFrame::fromXYZYPRDegrees(0.5,0,0,0,0,0);
+		};
+
+		cube2 = VisibleEntity{
+			model = "whiteCube";
+			frame = CFrame::fromXYZYPRDegrees(0,-0.49,-0.01,0,0,90);
+		};
+
+		cube3 = VisibleEntity{
+			model = "whiteCube";
+			frame = CFrame::fromXYZYPRDegrees(0,0.49,-0.01,0,0,90);
+		};
+
+		cube4 = VisibleEntity{
+			model = "whiteBackCube";
+			frame = CFrame::fromXYZYPRDegrees(0,0,-0.49,90,0,0);
+		};
+
+		cube5 = VisibleEntity{
+			model = "tallCube";
+			frame = CFrame::fromXYZYPRDegrees(-0.2,-0.2,0,45,0,0);
+		};
+
+		cube6 = VisibleEntity{
+			model = "shortCube";
+			frame = CFrame::fromXYZYPRDegrees(0.2,-0.35,0.2,45,0,0);
+		};
+
+		camera = Camera {
+			frame = CFrame::fromXYZYPRDegrees(0,0,2);
+		};
+	};
+
+};

@@ -1,4 +1,6 @@
-/** \file App.cpp */
+/**
+\file App.cpp 
+*/
 #include "App.h"
 
 // Tells C++ to invoke command-line main() function even on OS X and Win32.
@@ -70,6 +72,10 @@ App::App(const GApp::Settings& settings) : GApp(settings) {
 // not in the constructor so that common exceptions will be
 // automatically caught.
 void App::onInit() {
+
+    // Log our target framerate to the debugger
+    debugPrintf("Target frame rate = %f Hz\n", 1.0f / realTimeTargetDuration());
+
     GApp::onInit();
 
     setFrameDuration(1.0f / 240.0f);

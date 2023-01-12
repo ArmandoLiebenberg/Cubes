@@ -7,7 +7,8 @@
 #pragma once
 #include <G3D/G3D.h>
 
-/** \brief Application framework. */
+/** \brief Application framework. this is the basic framework for our GUI application
+*/
 class App : public GApp {
 protected:
 

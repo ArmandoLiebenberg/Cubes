@@ -1,13 +1,13 @@
 Application Log
-Start: Wed Jan 11 18:59:14 2023
+Start: Thu Jan 12 15:21:55 2023
 
 WARNING: AudioDevice is not enabled. Set G3DSpecification::audio = true before invoking initGLG3D() to enable audio.
-Initializing System::findDataFile took 0.001734s
+Initializing System::findDataFile took 0.001715s
 
 Entering GApp::GApp()
 cwd = C:\Users\arman\Projects\Cubes\data-files
 System::setAppDataDir("C:\Users\arman\Projects\Cubes\data-files")
-System::setAppDataDirs()Initializing System::findDataFile took 0.001559s
+System::setAppDataDirs()Initializing System::findDataFile took 0.001408s
 Setting video mode
 wglSwapIntervalEXT(0);
 Setting initial rendering state.
@@ -468,10 +468,10 @@ Done GApp::loadFont(...)
 Done GApp::GApp()
 
 Found scenes:
+  "Task 1" (C:\Users\arman\Projects\Cubes\data-files/scene/task1.Scene.Any)
+  "Task 2" (C:\Users\arman\Projects\Cubes\data-files/scene/task2.Scene.Any)
+  "Test Scene" (C:\Users\arman\Projects\Cubes\data-files/scene/test.Scene.Any)
   "White Cube" (C:\Users\arman\Projects\Cubes\data-files/scene/whiteCube.Scene.Any)
-  "Test Scene" (C:\Users\arman\Projects\Cubes\data-files/test.Scene.Any)
-  <Parse error at C:\Users\arman\Projects\Cubes\data-files/whiteCube.Scene.Any:9(4): Expected a comma or close paren>
-  <Parse error at C:\Users\arman\Projects\Cubes\data-files/./whiteCube.Scene.Any:9(4): Expected a comma or close paren>
   "G3D Debug Animation (Skeletal)" (C:\Users\arman\g3d\data10\common/scene/G3D_Debug_Animation_(Skeletal).Scene.Any)
   "G3D Debug Area Light (Glossy)" (C:\Users\arman\g3d\data10\common/scene/G3D_Debug_Area_Light_(Glossy).Scene.Any)
   "G3D Debug Area Light (Matte)" (C:\Users\arman\g3d\data10\common/scene/G3D_Debug_Area_Light_(Matte).Scene.Any)
@@ -500,10 +500,10 @@ Found scenes:
   "G3D VR Holodeck" (C:\Users\arman\g3d\data10\common/scene/G3D_VR_Holodeck.Scene.Any)
   "G3D VR Portaldeck" (C:\Users\arman\g3d\data10\common/scene/G3D_VR_Portaldeck.Scene.Any)
 Found scenes:
+  "Task 1" (C:\Users\arman\Projects\Cubes\data-files/scene/task1.Scene.Any)
+  "Task 2" (C:\Users\arman\Projects\Cubes\data-files/scene/task2.Scene.Any)
+  "Test Scene" (C:\Users\arman\Projects\Cubes\data-files/scene/test.Scene.Any)
   "White Cube" (C:\Users\arman\Projects\Cubes\data-files/scene/whiteCube.Scene.Any)
-  "Test Scene" (C:\Users\arman\Projects\Cubes\data-files/test.Scene.Any)
-  <Parse error at C:\Users\arman\Projects\Cubes\data-files/whiteCube.Scene.Any:9(4): Expected a comma or close paren>
-  <Parse error at C:\Users\arman\Projects\Cubes\data-files/./whiteCube.Scene.Any:9(4): Expected a comma or close paren>
   "G3D Debug Animation (Skeletal)" (C:\Users\arman\g3d\data10\common/scene/G3D_Debug_Animation_(Skeletal).Scene.Any)
   "G3D Debug Area Light (Glossy)" (C:\Users\arman\g3d\data10\common/scene/G3D_Debug_Area_Light_(Glossy).Scene.Any)
   "G3D Debug Area Light (Matte)" (C:\Users\arman\g3d\data10\common/scene/G3D_Debug_Area_Light_(Matte).Scene.Any)
@@ -531,6 +531,11 @@ Found scenes:
   "G3D Test Models" (C:\Users\arman\g3d\data10\common/scene/G3D_Test_Models.Scene.Any)
   "G3D VR Holodeck" (C:\Users\arman\g3d\data10\common/scene/G3D_VR_Holodeck.Scene.Any)
   "G3D VR Portaldeck" (C:\Users\arman\g3d\data10\common/scene/G3D_VR_Portaldeck.Scene.Any)
+
+
+
+
+
 
 
 
@@ -579,7 +584,8 @@ swscale-5.dll
 fmod.dll
 C:/Users/arman/Projects/Cubes/data-files/icon.png
 C:/Users/arman/Projects/Cubes/data-files/log.txt
-C:/Users/arman/Projects/Cubes/data-files/scene/whiteCube.Scene.Any
+C:/Users/arman/Projects/Cubes/data-files/scene/task1.Scene.Any
+C:/Users/arman/Projects/Cubes/data-files/scene/task2.Scene.Any
 C:/Users/arman/g3d/G3D10/data-files/font/arial.fnt
 C:/Users/arman/g3d/G3D10/data-files/font/console-small.fnt
 C:/Users/arman/g3d/G3D10/data-files/font/greek.fnt
@@ -600,7 +606,11 @@ C:/Users/arman/g3d/G3D10/data-files/shader/AmbientOcclusion/AmbientOcclusion_rec
 C:/Users/arman/g3d/G3D10/data-files/shader/BumpMap/BumpMap.glsl
 C:/Users/arman/g3d/G3D10/data-files/shader/Camera/Camera.glsl
 C:/Users/arman/g3d/G3D10/data-files/shader/DDGIVolume/DDGIVolume.glsl
+C:/Users/arman/g3d/G3D10/data-files/shader/DefaultRenderer/DefaultRenderer_OIT_writePixel.glsl
+C:/Users/arman/g3d/G3D10/data-files/shader/DefaultRenderer/DefaultRenderer_compositeWeightedBlendedOIT.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/DefaultRenderer/DefaultRenderer_deferredShade.pix
+C:/Users/arman/g3d/G3D10/data-files/shader/Draw/Draw_sphereSection.pix
+C:/Users/arman/g3d/G3D10/data-files/shader/Draw/Draw_sphereSection.vrt
 C:/Users/arman/g3d/G3D10/data-files/shader/Film/Film_FXAA_13_quality.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/Film/Film_bloomExpose.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/Film/Film_composite.pix
@@ -618,6 +628,8 @@ C:/Users/arman/g3d/G3D10/data-files/shader/LightingEnvironment/LightingEnvironme
 C:/Users/arman/g3d/G3D10/data-files/shader/LightingEnvironment/LightingEnvironment_environmentMapUniforms.glsl
 C:/Users/arman/g3d/G3D10/data-files/shader/SkyboxSurface/SkyboxSurface_gbuffer.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/SkyboxSurface/SkyboxSurface_gbuffer.vrt
+C:/Users/arman/g3d/G3D10/data-files/shader/SlowMesh/SlowMesh_render.pix
+C:/Users/arman/g3d/G3D10/data-files/shader/SlowMesh/SlowMesh_render.vrt
 C:/Users/arman/g3d/G3D10/data-files/shader/TemporalFilter/TemporalFilter_apply.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/Texture/Texture.glsl
 C:/Users/arman/g3d/G3D10/data-files/shader/Texture/Texture_copy.pix

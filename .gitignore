@@ -1,5 +1,6 @@
 x64
 build
+.vs/
 *.db
 *.opengb
 data-files\log.txt
