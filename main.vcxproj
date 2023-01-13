@@ -103,6 +103,7 @@
   <ItemGroup>
     <None Include="data-files\scene\task1.Scene.Any" />
     <None Include="data-files\scene\task2.Scene.Any" />
+    <None Include="data-files\scene\task3.Scene.Any" />
     <None Include="data-files\scene\test.Scene.Any" />
     <None Include="data-files\scene\whiteCube.Scene.Any" />
     <None Include="journal\journal.md.html" />
