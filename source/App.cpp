@@ -338,19 +338,19 @@ void App::onCleanup() {
 }
 
 void build_file() {
-    G3D::TextOutput writer = G3D::TextOutput::TextOutput("scene/test.Scene.Any");
+    G3D::TextOutput writer = G3D::TextOutput::TextOutput("scene/task3.Scene.Any");
 
     G3D::String string1 = R"(// -*- c++ -*-
 {
 
-name = "test";
+name = "Task 3";
 
 models = {
 	cubeModel = ArticulatedModel::Specification {
 		filename = "model/cube/cube.obj";
 		preprocess = {
 			setMaterial(all(), "material/roughcedar/roughcedar-lambertian.png");
-			transformGeometry(all(), Matrix4::scale(2, 0.2, 0.5));
+			transformGeometry(all(), Matrix4::scale(0.3, 0.1, 2.0));
 		};
 	};
 };
@@ -382,6 +382,8 @@ entities = {
     writer.writeNewline();
 
     for (int i = 0; i < 50; i++) {
+        
+
         writer.printf("stair");
         writer.writeNumber(i);
         writer.writeSymbol("= VisibleEntity {");
@@ -391,13 +393,13 @@ entities = {
         writer.writeNewline();
 
         writer.printf("frame = CFrame::fromXYZYPRDegrees(");
-        writer.writeNumber(2.0*cos(i));
+        writer.writeNumber(0);
         writer.printf(",");
-        writer.writeNumber(i * 0.2);
+        writer.writeNumber(i * 0.1);
         writer.printf(",");
-        writer.writeNumber(2.0*sin(i));
+        writer.writeNumber(0);
         writer.printf(",");
-        writer.writeNumber(i * 3);
+        writer.writeNumber(i*17.0);
         writer.printf(",0,0);");
         writer.writeNewline();
 
