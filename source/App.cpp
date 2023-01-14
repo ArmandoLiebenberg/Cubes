@@ -2,7 +2,6 @@
 \file App.cpp 
 */
 #include "App.h"
-#include <cmath>
 
 // Tells C++ to invoke command-line main() function even on OS X and Win32.
 G3D_START_AT_MAIN();

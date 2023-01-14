@@ -3,14 +3,29 @@
 
 System Overview
 ===============================================================================
+At this point our program is just app.cpp, which sets the specifications of our render and defines
+some variables we're gonna need for the g3d rendering engine, and then overrides the g3d app class which
+does things like build our scene file, start the graphics engine and load scenes.
 
-
+The code we added to this was a target framerate logger to the OnInit() method, which logs
+our framerate in our render in real time, and some a method build_file() which builds our
+scene file for task 3 (which contains many identical cube objects with different locations in 3d space)
+by accessing the G3D::TextOutput class which contains many helpful methods.
 
 Coordinate System
 ===============================================================================
 
+![3D Axis](3D_AXIS_DIAGRAM.jpg)
+
+![2D Axis](2D_AXIS_DIAGRAM.jpg)
+
 Results
 ===============================================================================
+
+![Task One](TASK_1.jpg)
+![Task Two](TASK_2.jpg)
+![Task Three](TASK_3.jpg)
+
 
 Process
 -------------------------------------------------------------------------------
