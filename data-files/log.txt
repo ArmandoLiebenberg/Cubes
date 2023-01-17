@@ -1,13 +1,13 @@
 Application Log
-Start: Sat Jan 14 18:36:20 2023
+Start: Tue Jan 17 14:14:53 2023
 
 WARNING: AudioDevice is not enabled. Set G3DSpecification::audio = true before invoking initGLG3D() to enable audio.
-Initializing System::findDataFile took 0.001730s
+Initializing System::findDataFile took 0.001756s
 
 Entering GApp::GApp()
 cwd = C:\Users\arman\Projects\Cubes\data-files
 System::setAppDataDir("C:\Users\arman\Projects\Cubes\data-files")
-System::setAppDataDirs()Initializing System::findDataFile took 0.001208s
+System::setAppDataDirs()Initializing System::findDataFile took 0.001558s
 Setting video mode
 wglSwapIntervalEXT(0);
 Setting initial rendering state.
@@ -471,6 +471,7 @@ Found scenes:
   "Task 1" (C:\Users\arman\Projects\Cubes\data-files/scene/task1.Scene.Any)
   "Task 2" (C:\Users\arman\Projects\Cubes\data-files/scene/task2.Scene.Any)
   "Task 3" (C:\Users\arman\Projects\Cubes\data-files/scene/task3.Scene.Any)
+  "Task 4" (C:\Users\arman\Projects\Cubes\data-files/scene/task4.Scene.Any)
   "test" (C:\Users\arman\Projects\Cubes\data-files/scene/test.Scene.Any)
   "White Cube" (C:\Users\arman\Projects\Cubes\data-files/scene/whiteCube.Scene.Any)
   "G3D Debug Animation (Skeletal)" (C:\Users\arman\g3d\data10\common/scene/G3D_Debug_Animation_(Skeletal).Scene.Any)
@@ -504,6 +505,7 @@ Found scenes:
   "Task 1" (C:\Users\arman\Projects\Cubes\data-files/scene/task1.Scene.Any)
   "Task 2" (C:\Users\arman\Projects\Cubes\data-files/scene/task2.Scene.Any)
   "Task 3" (C:\Users\arman\Projects\Cubes\data-files/scene/task3.Scene.Any)
+  "Task 4" (C:\Users\arman\Projects\Cubes\data-files/scene/task4.Scene.Any)
   "test" (C:\Users\arman\Projects\Cubes\data-files/scene/test.Scene.Any)
   "White Cube" (C:\Users\arman\Projects\Cubes\data-files/scene/whiteCube.Scene.Any)
   "G3D Debug Animation (Skeletal)" (C:\Users\arman\g3d\data10\common/scene/G3D_Debug_Animation_(Skeletal).Scene.Any)
@@ -533,6 +535,8 @@ Found scenes:
   "G3D Test Models" (C:\Users\arman\g3d\data10\common/scene/G3D_Test_Models.Scene.Any)
   "G3D VR Holodeck" (C:\Users\arman\g3d\data10\common/scene/G3D_VR_Holodeck.Scene.Any)
   "G3D VR Portaldeck" (C:\Users\arman\g3d\data10\common/scene/G3D_VR_Portaldeck.Scene.Any)
+
+
 
 
 
@@ -579,9 +583,15 @@ postproc-55.dll
 swresample-3.dll
 swscale-5.dll
 fmod.dll
+C:/Users/arman/Projects/Cubes/data-files/../journal/2023-01-17__000.jpg
+C:/Users/arman/Projects/Cubes/data-files/../journal/2023-01-17__000_Made_some_progress_the_blueprint_for_the_task_is_there.jpg
+C:/Users/arman/Projects/Cubes/data-files/../journal/journal.md.html
+C:/Users/arman/Projects/Cubes/data-files/../journal/journal.md.html
 C:/Users/arman/Projects/Cubes/data-files/icon.png
 C:/Users/arman/Projects/Cubes/data-files/log.txt
 C:/Users/arman/Projects/Cubes/data-files/scene/task3.Scene.Any
+C:/Users/arman/Projects/Cubes/data-files/scene/task4.Scene.Any
+C:/Users/arman/Projects/Cubes/data-files/scene/task4.Scene.Any
 C:/Users/arman/g3d/G3D10/data-files/font/arial.fnt
 C:/Users/arman/g3d/G3D10/data-files/font/console-small.fnt
 C:/Users/arman/g3d/G3D10/data-files/font/greek.fnt
@@ -613,6 +623,8 @@ C:/Users/arman/g3d/G3D10/data-files/shader/GBuffer/GBuffer.glsl
 C:/Users/arman/g3d/G3D10/data-files/shader/GFont/GFont_render.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/GFont/GFont_render.vrt
 C:/Users/arman/g3d/G3D10/data-files/shader/GaussianBlur/GaussianBlur_apply.pix
+C:/Users/arman/g3d/G3D10/data-files/shader/GuiTextureBox/GuiTextureBox_2D.pix
+C:/Users/arman/g3d/G3D10/data-files/shader/GuiTextureBox/GuiTextureBox_Arrows.glsl
 C:/Users/arman/g3d/G3D10/data-files/shader/GuiTheme/GuiTheme_render.pix
 C:/Users/arman/g3d/G3D10/data-files/shader/GuiTheme/GuiTheme_render.vrt
 C:/Users/arman/g3d/G3D10/data-files/shader/Light/Light.glsl
@@ -649,13 +661,17 @@ C:/Users/arman/g3d/data10/common/cubemap/cornellbox/empty-RG-NZ.png
 C:/Users/arman/g3d/data10/common/cubemap/cornellbox/empty-RG-PX.png
 C:/Users/arman/g3d/data10/common/cubemap/cornellbox/empty-RG-PY.png
 C:/Users/arman/g3d/data10/common/cubemap/cornellbox/empty-RG-PZ.png
+C:/Users/arman/g3d/data10/common/cubemap/noonclouds/noonclouds_bk.png
+C:/Users/arman/g3d/data10/common/cubemap/noonclouds/noonclouds_dn.png
+C:/Users/arman/g3d/data10/common/cubemap/noonclouds/noonclouds_ft.png
+C:/Users/arman/g3d/data10/common/cubemap/noonclouds/noonclouds_lf.png
+C:/Users/arman/g3d/data10/common/cubemap/noonclouds/noonclouds_rt.png
+C:/Users/arman/g3d/data10/common/cubemap/noonclouds/noonclouds_up.png
 C:/Users/arman/g3d/data10/common/model/CornellBox/CornellBox.zip
 C:/Users/arman/g3d/data10/common/model/CornellBox/CornellBox.zip/CornellBox-Original.mtl
 C:/Users/arman/g3d/data10/common/model/CornellBox/CornellBox.zip/CornellBox-Original.obj
 C:/Users/arman/g3d/data10/common/model/cube/cube.obj
 C:/Users/arman/g3d/data10/common/model/cube/default.mtl
-C:/Users/arman/g3d/data10/common/model/primitive/default.mtl
-C:/Users/arman/g3d/data10/common/model/primitive/square.obj
-C:/Users/arman/g3d/data10/common/scene/G3D_Debug_Roughness.Scene.Any
+C:/Users/arman/g3d/data10/common/model/cube/default.png
 C:/Users/arman/g3d/data10/common/scene/G3D_Simple_Cornell_Box_(Area_Light).Scene.Any
 

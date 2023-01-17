@@ -3,6 +3,30 @@
 
 
 
+2023-01-17: Task four: Getting There
+=============================================================
+![Made some progress, the blueprint for the task is there](2023-01-17__000_Made_some_progress_the_blueprint_for_the_task_is_there.jpg)
+
+We're generating our Cube wave successfully and each individual cube cannot be
+disconnected from the cube
+behind it. All we have to do now is let it look at
+all 4 cubes around it to determine what height it can be.
+
+We essentially want
+to cap the height of each cube to be within the range to touch all 4 cube faces
+to other cubes. This 
+will probably just involve some conditional statements to
+catch boundry cases, but that should be fine.
+
+
+
+2023-01-17: Task Three: Final Touches
+=============================================================
+
+I've moved the method for generating the scene file for task three out of App.cpp and into its own source file, this
+is in preperation for task four in which I'll also be using this method to generate a scene file. (Doing so multiple
+times in App.cpp not only seems incorrect and not generalisable, but would also make the file unreasonably long
+for what it does)
 
 
 
@@ -24,7 +48,7 @@ works.
 ![All the building blocks are there, but I'm having some trouble with the 3d geometry of constructing a spiral staircase](2023-01-13__000_All_the_building_blocks_are_there_but_I_m_having_some_trouble_with_the_3d_geometry_of_constructing_a_spiral_staircase.jpg)
 
 We've generated a scene file, filled it with textured "stair" cubes and even
-rotated them in a spiral fashio, but these cubes rotate around their center and
+rotated them in a spiral fashion, but these cubes rotate around their center and
 obviously this results in a janky jenga block tower as seen above.
 
 Will need to

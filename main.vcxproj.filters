@@ -4,9 +4,21 @@
     <ClCompile Include="source\App.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\build_spiral.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\build_wave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\App.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\build_spiral.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\build_wave.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -28,6 +40,9 @@
       <Filter>Scene Files</Filter>
     </None>
     <None Include="data-files\scene\task3.Scene.Any">
+      <Filter>Scene Files</Filter>
+    </None>
+    <None Include="data-files\scene\task4.Scene.Any">
       <Filter>Scene Files</Filter>
     </None>
   </ItemGroup>
