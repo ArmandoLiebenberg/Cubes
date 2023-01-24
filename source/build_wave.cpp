@@ -1,3 +1,6 @@
+/**
+\file build_wave.cpp
+*/
 #pragma once
 #include <random>
 #include <G3D/G3D.h>
@@ -38,17 +41,38 @@ void build_wave() {
 
     std::random_device rd;
     std::default_random_engine generator(rd());
-    std::uniform_real_distribution<double> distribution(-1, 1);
+    std::uniform_real_distribution<double> distribution(-0.5, 0.5);
 
-    const int range = 10;
-    double heights[101] = { 0 }; // One larger than the amount of cubes you have
+    const int xDim = 20;
+    const int yDim = 20;
 
-    for (int i = 0; i < range; i++) {
-        for (int j = 0; j < range; j++) {
+    double heights[xDim*yDim] = { 0 }; // One larger than the amount of cubes you have #1
+
+    for (int i = 0; i < xDim; i++) {
+        for (int j = 0; j < yDim; j++) {
 
             double variableHeight = distribution(generator);
-            variableHeight += heights[i * 10 + j]; // Because this looks one back
-            heights[i * 10 + j + 1] = variableHeight;
+
+            // first row
+
+            double surroundHeight = 0;
+
+            if (i == 0) {
+                if (j != 0) {
+                    surroundHeight = (heights[j - 1]);
+                }
+                
+            }
+            else if (j == 0) {
+                surroundHeight = heights[(i - 1) * 10 + j];
+            }
+
+            else if (i > 0) {
+                surroundHeight = (heights[i * 10 + j - 1] + heights[(i - 1) * 10 + j]) / 2;
+            }
+            
+            variableHeight += surroundHeight; // Because this looks one back #2
+            heights[i * 10 + j] = variableHeight;
 
             writer.printf("cube");
             writer.writeNumber((i + j) * (i + j + 1) / 2 + i);

@@ -4,13 +4,14 @@
 System Overview
 ===============================================================================
 At this point our program is just app.cpp, which sets the specifications of our render and defines
-some variables we're gonna need for the g3d rendering engine, and then overrides the g3d app class which
+some variables we're going need for the g3d rendering engine. It overrides the g3d app class which
 does things like build our scene file, start the graphics engine and load scenes.
 
 The code we added to this was a target framerate logger to the OnInit() method, which logs
-our framerate in our render in real time, and some a method build_file() which builds our
-scene file for task 3 (which contains many identical cube objects with different locations in 3d space)
-by accessing the G3D::TextOutput class which contains many helpful methods.
+our framerate in our render in real time, and two custom c++ source files called build_wave.cpp
+and build_spiral.cpp which contain methods to build our scene files for task 3 and 4 (which contains
+many identical cube objects with different locations in 3d space) by accessing the G3D::TextOutput 
+class which contains many helpful methods for constructing text files.
 
 Coordinate System
 ===============================================================================
@@ -25,6 +26,7 @@ Results
 ![Task One](TASK_1.jpg)
 ![Task Two](TASK_2.jpg)
 ![Task Three](TASK_3.jpg)
+![Task Four](TASK_4.jpg)
 
 
 Process
@@ -39,6 +41,13 @@ We use the Cantor pairing function to map our i and j variables (the x and z coo
 unique integer (for object naming purposes, this is difficult to do in G3D as the writeNumber function inserts
 a space after each write, which messes up the formatting)
 
+The height (y coordinate) of each cube is mapped as Base height + variable height. Where The base height is the 
+average of the cube before it and the cube in the previous row but some column. This is because our cube wave is
+constructed in a row-by-row fashion.
+
+There are some issues with this method. Namely if the previously placed cube and the cube in the row before are too
+different you could end up with a midpoint that allows for floating cubes. (Need std::clamp for this but the project is on
+c14 I think)
 
 
 Latex Equation
@@ -49,11 +58,73 @@ $$ \frac{df(x)}{dx} = \lim_{h \to 0} \left[ \frac{f(x+h) - f(x-h)}{2h} \right] $
 Questions
 ===============================================================================
 
+<ul>
+<li>*What are the differences between the Scene* and shared_ptr<\scene> data types in C++? *</li>
+
+The difference between a raw pointer and a shared pointer is that share pointers deallocate objects once no more pointers reference that object, and
+keep track of how many pointers do reference that object. Raw pointers simply point at an object and leave memory management to you.
+
+<li>*How does G3D know where the scene files are located?* </li>
+
+On initialization G3D calls dataDir (typically with < Auto > as the parameter) to set the location for scene files, if we want to include
+any additional directories to look for scene files we would call appendSceneSearchPaths() with an array of String type paths
+
+<li>*Why should you to put your initialization code into App::onInit instead of constructor App::App? 
+(Tip: There are many reasons. Try throwing an exception from each, and consider the implications of throwing an exception from a class's constructor.)* </li>
+
+To catch common exceptions automatically. I.e if we attempt to load a scene file and it doesn't load properly,
+we still want our application to run. It should simply fail to load the scene.
+
+<li>*What is the call chain that invokes App::onGraphics3D?* </li>
+
+loadScene() -> onGraphics() -> onGraphics3D()
+
+<li>*Where is the file cube.obj stored on the file system? How did the Scene parser know to load it from there?* </li>
+
+It's stored in "g3d\data10\common\model\cube". There is a function in Filesystem.cpp called FilePath that is run in ArticulatedModel on initialization of the object which determines the path
+of g3d's data directory.
+
+<li>*You can create a material in a scene file from a Color3. There are many more ways to construct a G3D material, however. One of these takes separate
+lambertian, glossy, emissive, and transmissive values. Speculate on why a homogeneous material (i.e., one without a pattern or image)
+would require four separate "colors" in its specification.* </li>
+
+To determine how light interacts with a model apart from the idea of color, i.e how it emits from it or reflects off of it. 
+
+
+</ul>
+
+
 Reflection
 ===============================================================================
 
+I have learnt: 
+<ul>
+<li>The basics of working with VScode</li>
+<li>How subversion differs from Git and how to use it</li>
+<li>How to *not* use a journal to document your coding process</li>
+<li>How to use Doxygen to generate Javadoc style documentation for C++ programs</li>
+<li>How to use Markdeep to generate a simple report on a project using markdown</li>
+<li>How pointers work and how to use smart pointers instead of C-style raw pointers</li>
+<li>Improved my knowledge of C++ considerably. Now feel comfortable writing simple programs
+    and editing others' source code</li>
+<li>Gained a familiarity with the Model/Entity/Surface design pattern</li>
+<li>Learnt how 3D scenes are constructed through code</li>
+<li>How to use pairing functions to generate unique IDs</li>
+</ul>
+
+This project has taught me a lot about taking an exisiting project and building upon it, documenting every
+step of the way. I've learnt a lot about trawling through documentation and source code to figure out how
+stuff works, and I've  gained a respect for writing my own good documentation for easier reference later.
+
 Time
 ===============================================================================
+
+My total tracked time for the cubes project was 5 hours and 14 minutes. This does not include setting up the working environment
+(Had some major issues which involved needing to install a fresh copy of windows) or reading the graphics codex. This figure is likely
+underreported by about 3-5 hours as I have spent a considerable amount of time trawling through documentation or writing the report whilst
+not at my desktop
+
+I have spent about an hour or so polishing up my custom scene and fixing formatting in the report.
 
 
 

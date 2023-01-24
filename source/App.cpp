@@ -69,6 +69,7 @@ int main(int argc, const char* argv[]) {
 
 
 App::App(const GApp::Settings& settings) : GApp(settings) {
+
 }
 
 
@@ -76,6 +77,7 @@ App::App(const GApp::Settings& settings) : GApp(settings) {
 // not in the constructor so that common exceptions will be
 // automatically caught.
 void App::onInit() {
+
 
     // Log our target framerate to the debugger
     debugPrintf("Target frame rate = %f Hz\n", 1.0f / realTimeTargetDuration());
